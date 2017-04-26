@@ -29,6 +29,9 @@ int board[DIM_MAX][DIM_MAX];
 // dimensions
 int d;
 
+//Blank space
+int a,b;
+
 // prototypes
 void clear(void);
 void greet(void);
@@ -54,6 +57,8 @@ int main(int argc, string argv[])
             DIM_MIN, DIM_MIN, DIM_MAX, DIM_MAX);
         return 2;
     }
+    a=d-1;
+    b=d-1;
 
     // open log
     FILE *file = fopen("log.txt", "w");
