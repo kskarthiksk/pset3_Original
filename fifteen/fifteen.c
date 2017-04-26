@@ -201,7 +201,35 @@ void draw(void)
  */
 bool move(int tile)
 {
-    // TODO
+    //Function to move
+   if(tile==board[a][b+1])
+    {
+        board[a][b]=board[a][b+1];
+        board[a][b+1]=0;
+        b++;
+        return true;
+    }
+    else if(tile==board[a][b-1])
+    {
+        board[a][b]=board[a][b-1];
+        board[a][b-1]=0;
+        b--;
+        return true;
+    }
+    else if(tile==board[a+1][b])
+    {
+        board[a][b]=board[a+1][b];
+        board[a+1][b]=0;
+        a++;
+        return true;
+    }
+    else if(tile==board[a-1][b])
+    {
+        board[a][b]=board[a-1][b];
+        board[a-1][b]=0;
+        a--;
+        return true;
+    }
     return false;
 }
 
