@@ -156,7 +156,18 @@ void greet(void)
  */
 void init(void)
 {
-    // TODO
+    //Initialising board
+    int n=d*d-1,i,j;
+    for(i=0;i<d&&n>=0;i++)
+    {
+        for(j=0;j<d&&n>=0;j++,n--)
+            board[i][j]=n;
+    }
+    if(d%2==0)
+    {
+        board[d-1][d-2]=2;
+        board[d-1][d-3]=1;
+    }
 }
 
 /**
