@@ -239,6 +239,27 @@ bool move(int tile)
  */
 bool won(void)
 {
-    // TODO
+    //Function to show if the user has won.
+    int i,j;
+    if(a==d-1&&b==d-1)
+    {
+        for(i=0;i<d;i++)
+        {
+            for(j=0;j<d-1;j++)
+            {
+                if(board[i][j]>board[i][j+1]&&(i!=d-1||j!=d-2))
+                    return false;
+            }
+        }
+        for(j=0;j<d;j++)
+        {
+            for(i=0;i<d-1;i++)
+            {
+                if(board[i][j]>board[i+1][j]&&(i!=d-2||j!=d-1))
+                    return false;
+            }
+        }
+    return true;
+    }
     return false;
 }
