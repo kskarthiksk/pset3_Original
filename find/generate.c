@@ -21,17 +21,17 @@
 
 int main(int argc, string argv[])
 {
-    // TODO: comment me
+    // If the user doesn't type the arguments correctly, tell the user the correct usage.
     if (argc != 2 && argc != 3)
     {
         printf("Usage: ./generate n [s]\n");
         return 1;
     }
 
-    // TODO: comment me
+    // Convert argv[1] from string to integer type.
     int n = atoi(argv[1]);
 
-    // TODO: comment me
+    // If there are 3 arguments, use ther third as argument for srand. Else use time as argument.
     if (argc == 3)
     {
         srand48((long) atoi(argv[2]));
@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         srand48((long) time(NULL));
     }
 
-    // TODO: comment me
+    // Print n random numbers between 0 and LIMIT.
     for (int i = 0; i < n; i++)
     {
         printf("%i\n", (int) (drand48() * LIMIT));
